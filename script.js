@@ -29,7 +29,7 @@ function win(userchoice, computerchoice) {
   const smalluserword = "user".fontsize(3).sub();
   const smallcompword = "comp".fontsize(3).sub();
   const userchoicediv = document.getElementById(userchoice);
-  result_p.innerHTML = `${convertToword(userchoice)}${smalluserword} beats ${convertToword(computerchoice)}${smallcompword}. You win!"`;
+  result_p.innerHTML = `${convertToword(userchoice)}${smalluserword} beats ${convertToword(computerchoice)}${smallcompword}. You win!`;
   userchoicediv.classList.add('green-glow');
   setTimeout(function() {document.getElementById(userchoice).classList.remove('green-glow')}, 700);
 }
@@ -38,10 +38,10 @@ function lose(userchoice, computerchoice) {
   computerscore++;
   userscore_span.innerHTML = userscore;
   computerscore_span.innerHTML = computerscore;
-  const smalluserword = "user".fontsize(3).sub();
-  const smallcompword = "comp".fontsize(3).sub();
+  const smalluserword = "user".fontsize(2).sub();
+  const smallcompword = "comp".fontsize(2).sub();
   const userchoicediv = document.getElementById(userchoice);
-  result_p.innerHTML = `${convertToword(userchoice)}${smalluserword} loses to ${convertToword(computerchoice)}${smallcompword}. You lost.."`;
+  result_p.innerHTML = `${convertToword(userchoice)}${smalluserword} loses to ${convertToword(computerchoice)}${smallcompword}. You lost..`;
   userchoicediv.classList.add('red-glow');
   setTimeout(function() {document.getElementById(userchoice).classList.remove('red-glow')}, 700);
 }
@@ -52,7 +52,7 @@ function draw(userchoice, computerchoice) {
   const smalluserword = "user".fontsize(3).sub();
   const smallcompword = "comp".fontsize(3).sub();
   const userchoicediv = document.getElementById(userchoice);
-  result_p.innerHTML = `${convertToword(userchoice)}${smalluserword} ties ${convertToword(computerchoice)}${smallcompword}. Draw."`;
+  result_p.innerHTML = `${convertToword(userchoice)}${smalluserword} ties ${convertToword(computerchoice)}${smallcompword}. Draw.`;
   userchoicediv.classList.add('grey-glow');
   setTimeout(function() {document.getElementById(userchoice).classList.remove('grey-glow')}, 700);
 }
